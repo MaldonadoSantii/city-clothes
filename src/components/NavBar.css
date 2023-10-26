@@ -1,0 +1,11 @@
+.cityClothes{
+    height: 150px;
+    width: 150px;
+}
+.containerNavBar{
+    
+    background-color: rgb(188, 181, 181);
+}
+#dropdownNavbar{
+    margin-left: 100px;
+}
