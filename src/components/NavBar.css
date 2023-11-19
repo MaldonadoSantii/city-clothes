@@ -1,11 +1,73 @@
 .cityClothes{
-    height: 150px;
-    width: 150px;
+    margin-left: 80px;
+    /* height: 140px;
+    width: 140px; */
 }
 .containerNavBar{
-    
     background-color: rgb(188, 181, 181);
+    height: 15vh;
 }
 #dropdownNavbar{
     margin-left: 100px;
+}
+div.containerBody{
+    height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+}
+
+.body{
+    height: auto;
+}
+.Cart{
+    margin-left: 320px;
+    height: 35px;
+    width: 35px;
+}
+.cartWidget{
+    position: relative;
+}
+.numeroHardcodeado{
+    margin-top: 30px;
+    position:absolute;
+    top: 5px; 
+    right: 60px; 
+    background-color: gray;
+    color: white; 
+    border-radius: 40%;
+    padding: 2px;
+    font-size: 12px; 
+}
+div.containerFooter{
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    
+}
+div.iconApps{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    padding-bottom: 5px;
+    font-size: 23px;
+}
+div.iconCopyright{
+    color: aliceblue;
+    padding-left: 100px;
+
+}
+.navLink{
+    width: auto;
+    display: inline-block;
+    padding: 0px;
+    margin:0;
+    color: black;
+    text-decoration: none;
+}
+.cartLink{
+   color: black;
+    text-decoration: none;
+    width: auto;
+    padding: 0px;
+    margin: 0px;
 }
