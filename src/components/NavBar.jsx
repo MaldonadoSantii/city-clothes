@@ -13,7 +13,7 @@ const NavBar = () => {
     <div className='containerNavBar' fluid>
       <Row>
         <Col className='cityClothes mt-5'>
-          <NavLink className='navLink' to={"/home"}>
+          <NavLink className='navLink' to={"/"}>
             <h1> CITY CLOTHES</h1>
           </NavLink>
         </Col>

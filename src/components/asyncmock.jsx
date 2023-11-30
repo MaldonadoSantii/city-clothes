@@ -58,23 +58,22 @@ const Productos = [
         })
     }
     
-    export const getUnProducto = (id) => {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                // Convert idItem to number
-                const id = parseInt(id, 6);
-                const producto = Productos.find((item) => item.id === id);
-                resolve(producto);
-            }, 500);
-        });
-    };
+ export const getUnProducto = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            //  const id = parseInt(id, 6);
+             const producto = Productos.find((item) => item.id === id);
+             resolve(producto);
+       }, 500);
+     });
+ };
     
     
     export const getProdByCat = (category) => {
         return new Promise(resolve => {
             setTimeout(() => {
-                const productosCategoria = Productos.filter(item => item.categoria === category);
-                resolve(productosCategoria);
+                const productosCategory = Productos.filter(item => item.category === category);
+                resolve(productosCategory);
             }, 500)
         })
     }

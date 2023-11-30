@@ -6,27 +6,20 @@ import productos from "./productos.json"
 
 
 
-
-const ItemDetail = () => {
-
-
-
-
+const ItemDetail = ({ id, titulo, descripcion, precio, pictureUrl }) => {
   return (
-    <Row xs={1} md={3} className="g-4 py-2">
-      {productos.map((p) => (
-        <Col key={p.id} className='cardItem'>
-          <Card style={{ width: '18rem', height: "30rem" }} >
-            <Card.Img variant="top" src={p.pictureUrl} className='imgCard' />
-            <Card.Body>
-            <Card.Title> {p.titulo} </Card.Title>
-            <Card.Text className='p-1'> {p.descripcion} </Card.Text>
-            <Card.Text>${p.precio}</Card.Text>
-            <ItemCount />
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
+    <Row xs={1} md={3} >
+      <Col key={id} className=' px-4 cardItem'>
+        <Card style={{ width: '18rem', height: '21rem' }}>
+          <Card.Img variant="top" src={pictureUrl} className='imgCard' />
+          <Card.Body>
+            <Card.Title>{titulo}</Card.Title>
+            <Card.Text>{descripcion}</Card.Text>
+            <Card.Text>Precio: ${precio}</Card.Text>
+           
+          </Card.Body>
+        </Card>
+      </Col>
     </Row>
   );
 }

@@ -30,17 +30,17 @@ const App = () => {
              </div>
     
      <Routes>
-    <Route exact path='/home' element={<Home/>} />
+    <Route exact path='/' element={<Home/>} />
     <Route exact path='/cart' element={<CartConstruccion/>} />
     <Route exact path='/category/:category' element={<ItemListContainer/>}/>
     <Route exact path='/item/:id' element={<ItemDetailContainer/>} />
      </Routes>
 
              
-{/* <Home /> */}
 
-     {/* <ItemListContainer  /> */}
-        {/* <ItemDetailContainer />    */}
+
+    
+       
       <Footer />
     </Container>  
   </CarritoProvider>

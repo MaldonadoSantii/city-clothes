@@ -3,7 +3,7 @@
 }
 .divBody{
     display: flex;
-    height: auto;
+    height: 76.9vh;
     background-color: rgb(214, 214, 214);
     overflow: hidden;
     
@@ -17,7 +17,8 @@
     width: 180px;
 }
 .cardItem{
-    display: flex;
+    margin-left: 100px;
+    padding-top: 100px;
     justify-content: center;
     align-items: center;
 }
@@ -30,4 +31,8 @@ div.pCargando{
 .botonDetalles{
     padding-top: 5px;
     margin-top: 5px;
+}
+.detallesLink{
+    text-decoration: none;  
+    color: aliceblue;
 }
