@@ -62,7 +62,7 @@ const Productos = [
     return new Promise((resolve) => {
         setTimeout(() => {
             //  const id = parseInt(id, 6);
-             const producto = Productos.find((item) => item.id === id);
+             const producto = Productos.find((item) => item.id === parseInt(id));
              resolve(producto);
        }, 500);
      });

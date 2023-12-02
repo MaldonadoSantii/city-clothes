@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
-  const { id } = useParams().id;
+  const { id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,7 +36,7 @@ const ItemDetailContainer = () => {
   return (
     <div className='divBody'>
       {/* Renderiza el componente ItemDetail con el producto obtenido */}
-      {producto && <ItemDetail producto={producto} />}
+      {producto && <ItemDetail {...producto} />}
     </div>
   );
 };

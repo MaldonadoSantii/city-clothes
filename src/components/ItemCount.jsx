@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Badge, Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import { useCarrito } from './CarritoContext';
+import "./ItemListContainer.css"
 
 const ItemCount = ({ producto }) => {
   const [count, setCount] = useState(0);
@@ -30,7 +31,7 @@ const ItemCount = ({ producto }) => {
 
   return (
     <div>
-      <Button variant="outline-secondary" onClick={decreaseCount}>
+      <Button className='buttonRest' variant="outline-secondary" onClick={decreaseCount}>
         -
       </Button>
 
@@ -40,7 +41,7 @@ const ItemCount = ({ producto }) => {
         +
       </Button>
       <br />
-      <Button variant="secondary" onClick={addToCart}>
+      <Button className='addToCart' variant="secondary" onClick={addToCart}>
         Agregar al carrito
       </Button>
     </div>

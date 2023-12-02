@@ -36,3 +36,17 @@ div.pCargando{
     text-decoration: none;  
     color: aliceblue;
 }
+.cardItemDetail{
+    margin-left: 530px;
+    padding-top: 70px;
+}
+.addToCart{
+    margin-top: 6px;
+  margin-left: 60px;  
+}
+.buttonRest{
+    margin-left: 86px;
+}
+.precio{
+    margin-left: 86px;
+}

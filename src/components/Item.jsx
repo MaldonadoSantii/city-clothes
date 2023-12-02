@@ -18,7 +18,7 @@ const Item = ({ id, titulo, descripcion, precio, pictureUrl }) => {
             {/* <Card.Text>{descripcion}</Card.Text> */}
             {/* <Card.Text>Precio: ${precio}</Card.Text> */}
             <Button variant='secondary' className='botonDetalles'>
-              <NavLink className="detallesLink" to={"/item/:id"}>   Ver detalles </NavLink>
+              <NavLink className="detallesLink" to={`/item/${id}`}>   Ver detalles </NavLink>
             
             </Button>
           </Card.Body>
