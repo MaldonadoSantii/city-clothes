@@ -20,7 +20,7 @@ const NavBar = () => {
 
         <Col>
           <DropdownButton className='mt-5' id="dropdownNavbar" title="Categorias" data-bs-theme="dark" variant="secondary">
-            <DropdownItem> Todos los buzos </DropdownItem>
+            
             <DropdownItem>
               <NavLink className='linkEssential' to={"/category/Essential"}> Buzos "Essential" </NavLink>
             </DropdownItem>

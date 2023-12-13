@@ -26,3 +26,9 @@ const ItemDetail = ({ id, titulo, descripcion, precio, pictureUrl }) => {
 }
 
 export default ItemDetail
+
+
+
+
+// DESCRIPTION ADDITEMBUTON AGREGAR ITEMQUANTITYSELECTOR
+

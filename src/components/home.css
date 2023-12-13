@@ -6,25 +6,20 @@ padding: 0;
 }
 .bienvenidoHome{
     font-size: 29px;
-    margin-left: 60px;
+    padding-top: 20px;
+    margin-left: 500px;
 }
-.subtituloHome{
-    font-size: 20px;
-    margin-left: 240px;
-}
-.imgHome{
-    margin-left: 450px;
-    margin-top: -5px;
-}
+
+
 .divBodyCart{
-    display: inline-block;
+    
 background-color: rgb(214, 214, 214);
 margin: 0px;
 padding: 0;
 }
 .cartelAviso{
     font-size: 30px;
-    margin-left: 500px;
+    margin-left: 400px;
 }
 .subtituloCart{
     font-size: 20px;

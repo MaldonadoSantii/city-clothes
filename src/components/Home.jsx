@@ -1,23 +1,37 @@
-import React from 'react'
-import { Container, Image } from 'react-bootstrap'
-import "./home.css"
+import React, { useState, useEffect } from 'react';
+import { Container, Image, Card } from 'react-bootstrap';
+import "./home.css";
+import { useParams } from 'react-router-dom';
+import Item from './Item.jsx';
+import { collection, getDocs} from "firebase/firestore"
+import {db} from "../firebase/config.jsx"
+import ItemListContainer from './ItemListContainer.jsx';
 
-const Home = () => {
+const Home= () => {
+  const [productos, setProductos] = useState([]);
+
+  const { category } = useParams();
+
+  useEffect(() => {
+    const productosRef = collection(db, "productos");
+    getDocs(productosRef)
+    .then((resp)=>{
+      setProductos(
+
+        resp.docs.map((doc)=> {
+          return {...doc.data(), id: doc.id}
+        })
+      )
+
+    })
+    
+  }, [category]);
   return (
 <Container fluid className='divBodyHome'>
+  <h1 className='bienvenidoHome'>BIENVENIDO A CITY CLOTHES</h1>
 
-    
-        <h1 className='bienvenidoHome py-3'>
-            Bienvenidos a City Clothes, aquí encontrarás todos los productos que son tendencia y al mejor precio
-        
-        </h1>
-
-        <h3 className='subtituloHome'>
-            Al hacer Click en categorias podras encontrar los distintos tipos de prendas que tenemos!
-        </h3>
-        
-        <Image className='imgHome' src='../src/assets/city-clothes.png' />
-        
+    <ItemListContainer />
+       
         
 </Container>
   )

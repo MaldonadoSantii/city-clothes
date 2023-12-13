@@ -48,7 +48,7 @@ const Productos = [
     "category":"Stussy"
     }
     ]
-
+export default Productos
 
     export const getProductos = () => {
         return new Promise((resolve) => {

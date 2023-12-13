@@ -3,34 +3,25 @@ import "./ItemListContainer.css"
 import ItemList from './ItemList';
 import ItemDetail from "./ItemDetail"
 import { useParams } from 'react-router-dom';
-import { getUnProducto } from './asyncmock';
+import {doc, getDoc} from "firebase/firestore";
 import { useState, useEffect } from 'react';
+import { db } from '../firebase/config';
 
 
 
 
 const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
-  const { id } = useParams();
+  const  id  = useParams().id;
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // Utiliza la función getUnProducto para obtener el producto
-        const productoData = await getUnProducto(id);
-
-        // Verifica si el producto existe
-        if (productoData) {
-          setProducto(productoData);
-        } else {
-          console.log('No se encontró el producto');
-        }
-      } catch (error) {
-        console.error('Error al obtener el producto:', error);
-      }
-    };
-
-    fetchData();
+    const docRef = doc(db, "productos", id);
+    getDoc(docRef)
+    .then((resp) => {
+      setProducto(  
+        {...resp.data(), id: resp.id}
+      )
+    })
   }, [id]);
 
   return (

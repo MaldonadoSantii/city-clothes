@@ -1,32 +1,29 @@
-.itemListContainer{
-    text-align: center;
-}
+
 .divBody{
-    display: flex;
+    
     height: 76.9vh;
     background-color: rgb(214, 214, 214);
     overflow: hidden;
     
 }
-.imgProduct{
-    width: 200px;
-    height: 200px;
-}
+
 .imgCard{
     height: 210px;
     width: 180px;
 }
-.cardItem{
-    margin-left: 100px;
-    padding-top: 100px;
-    justify-content: center;
-    align-items: center;
-}
+ .cardItem{
+ 
+    margin-left: 15px;
+    padding-top: 10px;
+    /* justify-content: center;
+    align-items: center; */
+} 
 
 div.pCargando{
     display: flex;
     text-align: center;
     justify-content: center;
+   
 }
 .botonDetalles{
     padding-top: 5px;
